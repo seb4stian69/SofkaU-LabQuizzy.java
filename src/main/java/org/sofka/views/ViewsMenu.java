@@ -1,2 +1,4 @@
-package org.sofka.views;public class ViewsMenu {
+package org.sofka.views;
+
+public class ViewsMenu {
 }

@@ -1,2 +1,4 @@
-package org.sofka.views;public class ViewsHistory {
+package org.sofka.views;
+
+public class ViewsHistory {
 }

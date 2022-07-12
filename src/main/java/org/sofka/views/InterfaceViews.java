@@ -1,2 +1,4 @@
-package org.sofka.views;public interface InterfaceViews {
+package org.sofka.views;
+
+public interface InterfaceViews {
 }

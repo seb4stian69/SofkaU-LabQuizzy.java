@@ -1,2 +1,4 @@
-package org.sofka.model;public class ModelQuestion {
+package org.sofka.model;
+
+public class ModelQuestion {
 }

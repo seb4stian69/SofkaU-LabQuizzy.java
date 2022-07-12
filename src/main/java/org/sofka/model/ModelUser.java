@@ -1,2 +1,4 @@
-package org.sofka.model;public class ModelUser {
+package org.sofka.model;
+
+public class ModelUser {
 }

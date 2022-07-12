@@ -1,2 +1,4 @@
-package org.sofka.views;public class ViewsQuiz {
+package org.sofka.views;
+
+public class ViewsQuiz {
 }

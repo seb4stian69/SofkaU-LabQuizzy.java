@@ -1,2 +1,4 @@
-package org.sofka.controller;public class ControllerGetData {
+package org.sofka.controller;
+
+public class ControllerGetData {
 }

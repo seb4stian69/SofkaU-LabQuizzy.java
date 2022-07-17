@@ -11,8 +11,8 @@ import org.json.simple.parser.*;
 import org.sofka.model.ModelQuestion;
 
 public class ObjectQuestion {
-    private final static Logger log = Logger.getLogger("Logger");
 
+    private final static Logger log = Logger.getLogger("Logger");
     private static final String jsonPath = getJsonPath();
 
     private ObjectQuestion() {
@@ -63,7 +63,6 @@ public class ObjectQuestion {
             arrayQuestions.add(objectQuestion);
 
         }
-        //System.out.println(arrayQuestions.size());
 
         return arrayQuestions;
 

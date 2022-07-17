@@ -1,13 +1,13 @@
 package org.sofka.amain;
 
-import org.sofka.views.ViewsQuiz;
+import org.sofka.views.ViewsLogin;
 
 public class MainClass {
 
     public static void main(String[] args) {
 
-        ViewsQuiz quiz = new ViewsQuiz();
-        quiz.viewQuiz();
+        ViewsLogin login = new ViewsLogin();
+        login.viewContext();
 
     }
 

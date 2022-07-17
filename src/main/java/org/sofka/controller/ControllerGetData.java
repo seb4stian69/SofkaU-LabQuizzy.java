@@ -6,6 +6,9 @@ import com.mongodb.client.*;
 import org.bson.*;
 import java.io.*;
 import org.jboss.logging.Logger;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 import java.util.Properties;
 
 public class ControllerGetData {
@@ -48,7 +51,16 @@ public class ControllerGetData {
                 try (MongoCursor<Document> data = collection.find().cursor()) {
 
                     while (data.hasNext()) {
-                        log.info((data.next().toJson()));
+
+                        Object ob = new JSONParser().parse( data.next().toJson() );
+                        JSONObject objectJson = (JSONObject) ob;
+
+                        String name = objectJson.get("user").toString();
+                        Integer score = Integer.parseInt(objectJson.get("score").toString());
+                        Boolean won = Boolean.parseBoolean(objectJson.get("win").toString());
+
+                        log.info("User: " + name + " | Score: " + score + " | Result: " + won );
+
                     }
 
                 }

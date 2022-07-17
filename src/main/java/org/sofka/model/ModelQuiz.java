@@ -12,6 +12,7 @@ public class ModelQuiz {
     Integer level =1;
     Integer score;
 
+
     public ModelQuiz(List<ModelQuestion> questions){
 
         this.questions = questions;

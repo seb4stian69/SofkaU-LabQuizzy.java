@@ -3,8 +3,7 @@ package org.sofka.model;
 import lombok.*;
 import org.sofka.controller.ControllerPushData;
 
-@Getter
-@Setter
+@Getter @Setter @NoArgsConstructor
 public class ModelUser {
 
     String name;

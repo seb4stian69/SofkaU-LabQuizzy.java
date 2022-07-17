@@ -24,13 +24,13 @@ public class ViewsLoguin implements InterfaceViews {
 
         try {
 
-            log.info("Por favor ingrese el nombre de usuario");
+            log.info("Enter a user");
             nameUser = getDataBuffer.readLine();
             menu.setUser(createUser(nameUser));
             menu.viewContext();
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            log.error(e);
         }
 
     }

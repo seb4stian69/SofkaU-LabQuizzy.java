@@ -6,7 +6,7 @@ import org.sofka.model.ModelUser;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
+
 
 public class ViewsMenu implements InterfaceViews {
 
@@ -14,38 +14,57 @@ public class ViewsMenu implements InterfaceViews {
     final Logger log = Logger.getLogger("Logger");
     ModelUser user = null;
 
-    public ViewsMenu(){/*Void constructor*/}
+    public ViewsMenu() {/*Void constructor*/}
 
-    public void setUser(ModelUser user){
+    public void setUser(ModelUser user) {
         this.user = user;
     }
 
     @Override
-    public void viewContext(){
+    public void viewContext() throws RuntimeException {
 
-          log.info(" MENU:" +
-                  "1] Starts Game" +
-                  "2] View history" +
-                  "3] Exit");
+        log.info("\nMENU:\n1] Starts Game\n2] View history\n3] Exit");
 
-        Integer option = null;
+        Integer option;
 
         try {
             option = Integer.parseInt(getDataBuffer.readLine());
+
+            controlMenu(option);
+
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            log.error(e);
         }
 
-        // witch (option){
-        //
-        //    case 1 -> viewQuiz()
-
-        //
 
     }
 
-    // public void viewMenu(){
-    //     Scanner nom
-    // }
+    public void controlMenu(Integer option) {
+        switch (option) {
+
+            case 1 -> {
+                ViewsQuiz quiz = new ViewsQuiz();
+                quiz.viewContext();
+            }
+
+            case 2 -> {
+
+            }
+
+            case 3 -> System.exit(0);
+
+            default -> {
+
+                log.info("wrong option");
+                ViewsLoguin login = new ViewsLoguin();
+                login.viewContext();
+
+            }
+
+        }
+
+    }
 
 }
+
+

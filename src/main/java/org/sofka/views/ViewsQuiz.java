@@ -1,5 +1,6 @@
 package org.sofka.views;
 
+import org.jboss.logging.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.ParseException;
 import org.sofka.controller.ObjectQuestion;
@@ -10,29 +11,32 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ViewsQuiz {
+public class ViewsQuiz implements InterfaceViews {
 
     private final Scanner getData = new Scanner(System.in);
+    final Logger log = Logger.getLogger("Logger");
     private ModelQuestion question = null;
-    private ModelQuiz quiz = null;
-    private Integer level = 1;
-    private Integer score =0;
+    private Integer level = 0;
+    private Integer score = 0;
+
     private String[] randomOptions;
 
     public ViewsQuiz(){/*Void constructor*/}
 
     public void getQuestion(){
 
+        level+=1;
+
         try{
 
             JSONArray array = ObjectQuestion.returnArray();
             ArrayList<ModelQuestion> questions =  ObjectQuestion.mapQuestion(array);
 
-            quiz = new ModelQuiz(questions);
+            ModelQuiz quiz = new ModelQuiz(questions);
             question = quiz.getRandomQuestion(level);
 
         } catch (IOException|ParseException e) {
-            throw new RuntimeException(e);
+            log.error(e);
         }
 
     }
@@ -41,7 +45,6 @@ public class ViewsQuiz {
 
         getQuestion();
 
-        String quest = question.getQuestion();
         String correct = question.getCorrect();
         String option1 = question.getOption1();
         String option2 = question.getOption2();
@@ -49,42 +52,60 @@ public class ViewsQuiz {
 
         randomOptions = new String[] {correct,option1,option2,option3};
 
-        System.out.println("\n" + quest + "\n");
+    }
+
+    public void validate(String answer, Integer index){
+
+        if(Boolean.TRUE.equals(question.confirm( randomOptions[index] ))){
+
+            score+=1;
+            viewContext();
+
+        } else{
+
+            log.error(
+                    "Answer ["+answer+"] incorrect\n" +
+                    "you will be sent to the menu where in the [History] section you can see your results"
+            );
+
+        }
 
     }
 
-    public void viewQuiz (){
+    @Override
+    public void viewContext (){
 
+        ViewsMenu menu = new ViewsMenu();
         updateData();
 
         Arrays.sort(randomOptions);
 
-        for (String option: randomOptions){
-
-            System.out.println(option);
-
-        };
+        log.info(
+                "\n\nScore:" + score +
+                "\nQuestion: " + question.getQuestion() +
+                "\n\nA] " + randomOptions[0] +
+                "\nB] " + randomOptions[1] +
+                "\nC] " + randomOptions[2] +
+                "\nD] " + randomOptions[3] +
+                "\n\nPut your answer:"
+        );
 
         String answer = getData.nextLine();
 
-        if(Boolean.TRUE.equals(question.confirm( answer ))){
+        switch ( answer.toUpperCase() ){
 
-            System.out.println("Es correcto");
-            level+=1;
-            score +=10;
+            case "A" -> validate(answer,0);
+            case "B" -> validate(answer,1);
+            case "C" -> validate(answer,2);
+            case "D" -> validate(answer,3);
 
-            viewQuiz();
+            default -> {
+                log.error("[¡Wrong value!] You will be sent to the menu");
+                menu.viewContext();
+            }
 
-        }else {
-            System.out.println("Es incorrecto");
-            level =1;
-            score =0;
-            ///eejcutar vista nueva
         }
 
-
     }
-
-
 
 }

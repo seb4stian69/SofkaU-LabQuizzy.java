@@ -1,0 +1,204 @@
+{
+  "array": [
+    {
+      "level": 1,
+      "question": "The sun is?",
+      "correct": "a star",
+      "option1": "a planet",
+      "option2": "a black-hole",
+      "option3": "a quasar"
+    },
+    {
+      "level": 1,
+      "question": "The city of Nice is located in",
+      "correct": "France",
+      "option1": "Germany",
+      "option2": "Italy",
+      "option3": "Spain"
+    },
+    {
+      "level": 1,
+      "question": "The human beings lives on",
+      "correct": "earth",
+      "option1": "moon",
+      "option2": "mars",
+      "option3": "saturn"
+    },
+    {
+      "level": 1,
+      "question": "What is Python?",
+      "correct": "programming language",
+      "option1": "web app",
+      "option2": "a printer",
+      "option3": "a snake"
+    },
+    {
+      "level": 1,
+      "question": "Who invented the telephone?",
+      "correct": "Graham Bell",
+      "option1": "Einstein",
+      "option2": "Tesla",
+      "option3": "Steve Jobs"
+    },
+    {
+      "level": 2,
+      "question": "Which is more dense?",
+      "correct": "water",
+      "option1": "ice",
+      "option2": "air",
+      "option3": "helium"
+    },
+    {
+      "level": 2,
+      "question": "Which continent is larger?",
+      "correct": "Asia",
+      "option1": "Africa",
+      "option2": "Europe",
+      "option3": "Oceania"
+    },
+    {
+      "level": 2,
+      "question": "The capital of Japan is?",
+      "correct": "Tokio",
+      "option1": "Yokohama",
+      "option2": "Peking",
+      "option3": "Nagasaki"
+    },
+    {
+      "level": 2,
+      "question": "Most populated city in Colombia?",
+      "correct": "Bogota",
+      "option1": "Medellin",
+      "option2": "Cali",
+      "option3": "Cartagena"
+    },
+    {
+      "level": 2,
+      "question": "Recommended hours of sleep",
+      "correct": 8,
+      "option1": 6,
+      "option2": 12,
+      "option3": 4
+    },
+    {
+      "level": 3,
+      "question": "Largest Planet on the solar system",
+      "correct": "Jupiter",
+      "option1": "Uranus",
+      "option2": "Mercury",
+      "option3": "Saturn"
+    },
+    {
+      "level": 3,
+      "question": "Largest Animal on earth",
+      "correct": "blue whale",
+      "option1": "Shark",
+      "option2": "Lion",
+      "option3": "elephant"
+    },
+    {
+      "level": 3,
+      "question": "Heaviest element in the periodic table",
+      "correct": "Oganesson",
+      "option1": "Radon",
+      "option2": "Polonium",
+      "option3": "Mercury"
+    },
+    {
+      "level": 3,
+      "question": "Number of electrons on a Hydrogen Atom",
+      "correct": 1,
+      "option1": 2,
+      "option2": 3,
+      "option3": 4
+    },
+    {
+      "level": 3,
+      "question": "In which country is located Taj mahal",
+      "correct": "India",
+      "option1": "China",
+      "option2": "Taiwan",
+      "option3": "Russia"
+    },
+    {
+      "level": 4,
+      "question": "What is the name of Poland in Polish?",
+      "correct": "Polska",
+      "option1": "Poland",
+      "option2": "Polonnia",
+      "option3": "Polask"
+    },
+    {
+      "level": 4,
+      "question": "Most used OS in the world?",
+      "correct": "Windows",
+      "option1": "Linux",
+      "option2": "MacOS",
+      "option3": "ChromeOS"
+    },
+    {
+      "level": 4,
+      "question": "how many stars have European union flag",
+      "correct": 12,
+      "option1": 10,
+      "option2": 20,
+      "option3": 18
+    },
+    {
+      "level": 4,
+      "question": "Which of the following languages is not object-oriented",
+      "correct": "Haskell",
+      "option1": "C++",
+      "option2": "Java",
+      "option3": "Python"
+    },
+    {
+      "level": 4,
+      "question": "What is the last letter of the Greek alphabet?",
+      "correct": "omega",
+      "option1": "delta",
+      "option2": "nu",
+      "option3": "phi"
+    },
+    {
+      "level": 5,
+      "question": "Chartreuse is a color between yellow and what?",
+      "correct": "Green",
+      "option1": "Blue",
+      "option2": "Red",
+      "option3": "Magenta"
+    },
+    {
+      "level": 5,
+      "question": "How many keys are there on a standard grand piano?",
+      "correct": 88,
+      "option1": 82,
+      "option2": 92,
+      "option3": 84
+    },
+    {
+      "level": 5,
+      "question": "What is faster than light",
+      "correct": "Expansion of space-time",
+      "option1": "photons",
+      "option2": "nothing",
+      "option3": "Singularity"
+    },
+    {
+      "level": 5,
+      "question": "What disease can be caused by a lack of Vitamin C?",
+      "correct": "Scurvy",
+      "option1": "diabetes",
+      "option2": "Cirrhosis",
+      "option3": "anemia"
+    },
+    {
+      "level": 5,
+      "question": "What did Temujin change his name to?",
+      "correct": "Genghis Khan",
+      "option1": "Kublai Kahn",
+      "option2": "Lenin",
+      "option3": "Napoleon"
+    }
+  ]
+}

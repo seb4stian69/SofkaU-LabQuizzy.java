@@ -1,17 +1,14 @@
 package org.sofka.amain;
 
-import org.sofka.controller.ControllerGetData;
-import org.sofka.controller.ControllerPushData;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.ParseException;
+import java.io.IOException;
 
 public class MainClass {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ParseException {
 
-        ControllerPushData.pushInCollection("Sebastian nuevo",15,false);
-
-        ControllerGetData con = new ControllerGetData();
-        con.getDataCollection();
-
+        System.out.println("Nopuedeser");
 
     }
 

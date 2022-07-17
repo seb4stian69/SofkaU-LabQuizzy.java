@@ -1,11 +1,9 @@
 package org.sofka.controller;
 
 import org.jboss.logging.Logger;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Properties;
-
 import org.json.simple.*;
 import org.json.simple.parser.*;
 import org.sofka.model.ModelQuestion;

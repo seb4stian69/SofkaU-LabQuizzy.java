@@ -5,12 +5,11 @@ import java.util.List;
 import java.util.Objects;
 
 
-@Setter
-@Getter
+@Setter @Getter
 public class ModelQuiz {
 
     List<ModelQuestion> questions;
-    Integer level;
+    Integer level =1;
     Integer score;
 
     public ModelQuiz(List<ModelQuestion> questions){
@@ -29,6 +28,5 @@ public class ModelQuiz {
         return questionRandom.get(random);
 
     }
-
 
 }

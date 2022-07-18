@@ -7,7 +7,6 @@ import org.sofka.controller.ObjectQuestion;
 import org.sofka.model.ModelQuestion;
 import org.sofka.model.ModelQuiz;
 import org.sofka.model.ModelUser;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -105,6 +104,7 @@ public class ViewsQuiz implements InterfaceViews {
                 saveUser.setWon(true);
                 saveUser.saveNewPlayer();
                 log.info("! You have won, congratulations");
+                menu.setUser(saveUser);
                 menu.viewContext();
 
             } else {
@@ -120,6 +120,7 @@ public class ViewsQuiz implements InterfaceViews {
                             "you will be sent to the menu where in the [History] section you can see your results"
             );
 
+            menu.setUser(saveUser);
             menu.viewContext();
 
         }
@@ -157,7 +158,10 @@ public class ViewsQuiz implements InterfaceViews {
             case "B" -> validate(answer, 1);
             case "C" -> validate(answer, 2);
             case "D" -> validate(answer, 3);
-            case "E" -> menu.viewContext();
+            case "E" -> {
+                menu.setUser(saveUser);
+                menu.viewContext();
+            }
 
             default -> {
                 log.error("[¡Wrong value!] You will be sent to the menu");

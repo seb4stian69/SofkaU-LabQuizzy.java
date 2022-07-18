@@ -7,7 +7,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-
+/*
+ * @LuisaAvila@SebatianSantis
+ * @class ViewsMenu se realiza la construcción del menú que visualizará el usuario.
+ * @see se implementa la insterfaz InterfaceViews.
+ */
 public class ViewsMenu implements InterfaceViews {
 
     final BufferedReader getDataBuffer = new BufferedReader(new InputStreamReader(System.in));
@@ -38,7 +42,12 @@ public class ViewsMenu implements InterfaceViews {
 
 
     }
-
+    /*
+     * @LuisaAvila@SebatianSantis
+     * @class ControlMenu se encarga de ejecutar las diferentes funciones según opcion que introduzca el usuario.
+     * @param option hace referencia a la opción que introduce el usuario.
+     * @see se implementa el método quiz.viewContext para redirigir al quiz al usuario, quiz.setUser para guara el usuario,login.viewContext para redirigir el usuario al login.
+     */
     public void controlMenu(Integer option) {
 
         switch (option) {

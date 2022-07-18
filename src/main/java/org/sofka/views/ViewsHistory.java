@@ -8,6 +8,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+ * @LuisaAvila/SebatianSantis
+ * @class ViewsHistory se encarga de que el usuario pues revisar el historial de su partida.
+ * @see InterfaceViews se implementa la interfaz.
+ */
+
 public class ViewsHistory implements InterfaceViews{
 
     final BufferedReader getDataBuffer = new BufferedReader(new InputStreamReader(System.in));
@@ -20,6 +26,15 @@ public class ViewsHistory implements InterfaceViews{
     }
 
     public ViewsHistory(){/*Void constructor*/}
+
+
+    /*
+     * @LuisaAvila/SebatianSantis
+     * @method viewContext obtiene la data de la bse de datos a través de ControllerGetData
+     * @see ControllerGetData instancia la clase ControllerGetData para acceder al método ontrollerGetData.
+     */
+
+
 
     @Override
     public void viewContext(){

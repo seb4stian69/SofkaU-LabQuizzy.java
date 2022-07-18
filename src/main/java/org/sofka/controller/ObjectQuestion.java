@@ -8,10 +8,22 @@ import org.json.simple.*;
 import org.json.simple.parser.*;
 import org.sofka.model.ModelQuestion;
 
+/*
+ * @LuisaAvila @SebatianSantis
+ * @class ObjectQuestion se encarga de obtener la data de preguntas.
+ */
+
 public class ObjectQuestion {
 
     private final static Logger log = Logger.getLogger("Logger");
     private static final String jsonPath = getJsonPath();
+
+    /*
+     * @LuisaAvila @SebatianSantis
+     * @method ObjectQuestion trae la data de preguntas del archivo properties.
+     * @return retorna la data de preguntas
+     */
+
 
     private ObjectQuestion() {
         throw new IllegalStateException("utility class");
@@ -33,6 +45,13 @@ public class ObjectQuestion {
 
     }
 
+    /*
+     * @LuisaAvila @SebatianSantis
+     * @method returnArray se encarga de analizar la cadena de texto como JSON y accede al elemento array.
+     * @return retorna los objetos dentro del array.
+     */
+
+
     public static JSONArray returnArray() throws IOException, ParseException {
 
         Object ob = new JSONParser().parse(new FileReader(jsonPath));
@@ -40,6 +59,13 @@ public class ObjectQuestion {
         return (JSONArray) objectJson.get("array");
 
     }
+
+    /*
+     * @LuisaAvila @SebatianSantis
+     * @method mapQuestion se accede a los datos de cada uno de los objetos y se instancia la clase model para que cada clave del JSON se convierta en un atributo de la clase y asi acceder a la pregunta.
+     * @return retorna una estructura de datos
+     */
+
 
     public static ArrayList<ModelQuestion> mapQuestion(JSONArray array) {
 

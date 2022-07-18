@@ -8,14 +8,24 @@ import java.io.*;
 import org.jboss.logging.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
 import java.util.Properties;
 
 public class ControllerGetData {
 
     private final Logger log = Logger.getLogger("Logger");
 
+    /*
+     * @LuisaAvila @SebastianSantis
+     * @Class la clase ControllerGetData() la utilizamos para inicializar el controlador que recibe los datos dentro de la base de datos en mongo, esto con la finalidad de procesarlos y mostrarlos en pantalla dentro de la vista del historial
+     * */
+
     public ControllerGetData() {/*Void constructor*/}
+
+    /*
+     * @LuisaAvila @SebastianSantis
+     * @method getURIMongo() tiene la función de obtener la uri de mongoDb que esta dentro del archivo de config.properties
+     * @return String url, la clase retorna un string con los datos de la url de la base de datos en la nube
+     * */
 
     public String getURIMongo(){
 
@@ -32,6 +42,12 @@ public class ControllerGetData {
         }
 
     }
+
+    /*
+     * @LuisaAvila @SebastianSantis
+     * @method el método getDataCollection() mediante las funciones del paquete com.mongodb, nos obtiene la base de datos y la coleccion de la misma donde se encuentra la informacion suministrada por los usuarios al momento de finalizar su quiz, luego mediante un cursor y un ciclo while pintamos la informacion en consola destructurando los datos mediante el metodo get() el cual recibe la clave que obtiene el valor dentro de la base de datos
+     * @see Se muestran en consola los datos formateados de todas las personas que finalizaron (ganaron o perdieron) el quiz
+     * * */
 
     public void getDataCollection(){
 
